@@ -353,9 +353,12 @@ td,
 th {
   padding: 0; }
 
+/*VARIABLES*/
 /*MIXINS*/
 /*FONTS*/
-h1, h1.dark, h2, h3 {
+h1, h1.dark,
+h2,
+h3 {
   font-family: "Oswald", sans-serif;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
@@ -364,7 +367,7 @@ h1, h1.dark, h2, h3 {
   line-height: 1.3em; }
 
 h1, h1.dark {
-  font-size: 45px;
+  font-size: 40px;
   letter-spacing: 1px;
   text-transform: uppercase; }
 
@@ -372,7 +375,7 @@ h1.dark {
   color: #000000; }
 
 h2 {
-  font-size: 38px;
+  font-size: 25px;
   color: #000000;
   text-transform: uppercase; }
 
@@ -403,6 +406,7 @@ h3.light {
   margin: auto;
   margin: 10px;
   min-width: 150px;
+  border-radius: 2px;
   letter-spacing: .2px; }
   .button:hover, .dark-button:hover, .light-button:hover {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6); }
@@ -442,7 +446,8 @@ h3.light {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-.four-col, .two-col {
+.four-col,
+.two-col {
   padding: 60px 0; }
 
 /*CUSTOM*/
@@ -463,6 +468,8 @@ h3.light {
   -ms-flex-pack: center;
   width: 100%;
   height: 100%; }
+  .main h1 {
+    margin: 0px 10px 20px 10px; }
 
 .row-wrap {
   display: -webkit-box;
@@ -474,21 +481,37 @@ h3.light {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center; }
+  .row-wrap img {
+    max-width: 40px; }
 
-.text-alerts, .search-jobs {
+.text-alerts,
+.search-jobs {
   background-size: cover;
   background-repeat: no-repeat; }
+  .text-alerts h3,
+  .search-jobs h3 {
+    margin-bottom: 20px; }
 
 .text-alerts {
-  background-image: url(/img/text-alerts-bg.jpg); }
+  background-image: url(/img/text-alerts-bg1.jpg); }
 
 .search-jobs {
-  background-image: url(/img/search-jobs-bg.jpg); }
+  background-image: url(/img/search-jobs-bg1.jpg); }
 
 .logo {
-  margin: 10px auto; }
+  margin: 10px auto;
+  text-align: center; }
 
 /*MEDIA QUERIES*/
+@media (min-width: 500px) {
+  h1, h1.dark {
+    font-size: 45px; }
+
+  h2 {
+    font-size: 30px; }
+
+  .row-wrap img {
+    max-width: initial; } }
 @media (min-width: 767px) {
   h1, h1.dark {
     font-size: 80px; }
@@ -522,9 +545,18 @@ h3.light {
       margin-bottom: 15px; }
 
   .logo {
-    margin: 10px; }
+    margin: 10px;
+    text-align: left; }
 
-  h1, h1.dark, h2, h3 {
+  h1, h1.dark,
+  h2,
+  h3 {
     line-height: 1.6; } }
+@media (min-width: 1400px) {
+  .text-alerts {
+    background-image: url(/img/text-alerts-bg.jpg); }
+
+  .search-jobs {
+    background-image: url(/img/search-jobs-bg.jpg); } }
 
 /*# sourceMappingURL=main.css.map */
